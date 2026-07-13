@@ -26,6 +26,6 @@ jobs:
 
 
       - name: Check Health
-        run: curl -I "http://localhost:3000" || exit 1
+        run: curl -I "http://localhost:3000/health" || exit 1
          
 
