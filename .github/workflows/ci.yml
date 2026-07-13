@@ -19,7 +19,7 @@ jobs:
 
 
       - name: Start the app
-        run: npm start 
+        run: npm start &
 
       - name: Waiting for the application to start
         run: sleep 5
