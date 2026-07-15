@@ -53,6 +53,13 @@ jobs:
        - name: Job_2 environment
          run: |
           echo "Job2 environment: $JOB2_ENV"
+  job3:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Variables and secrets
+         run: |
+          echo "git Variables: ${{vars.FIRST_VARIABLE}}"
+          echo "git Secrets: ${{secrets.FIRST_SECRET}}"
         
         
 
