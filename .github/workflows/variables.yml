@@ -23,7 +23,7 @@ on:
 
 jobs:
   show_the_variables:
-     runs_on: ubuntu-latest
+     runs-on: ubuntu-latest
      steps:
        - name: Show the inputs
          run: |
