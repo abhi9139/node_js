@@ -9,5 +9,16 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhi9139/node_js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abhi9139/node_js/issues"
+  },
+  "homepage": "https://github.com/abhi9139/node_js#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
