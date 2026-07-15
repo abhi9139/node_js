@@ -19,6 +19,9 @@ on:
         required: true
         default: 'v1.0.0'
 
+env:
+ Global_Env: "One Tier"        
+
 
 
 jobs:
@@ -30,6 +33,11 @@ jobs:
           echo "Environment type: ${{inputs.environment}}"
           echo "Application Version : ${{inputs.version}}"
 
+       - name: Global_Variables
+         run: |
+          echo "Global env: $Global_Env" 
+        
+        
 
           
     
