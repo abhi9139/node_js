@@ -17,12 +17,14 @@ jobs:
         with:
          node-version: 20
 
+         
+      - name: Install dependencies
+        run : npm ci
 
       - name: Start the app
         run: npm start &
 
-      - name: Install dependencies
-        run : npm ci
+      
 
       - name: Waiting for the application to start
         run: sleep 5
