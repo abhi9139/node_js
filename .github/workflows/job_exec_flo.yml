@@ -19,6 +19,7 @@ jobs:
        run: sleep 2
   job3:
     runs-on: ubuntu-latest
+    if: ${{ always() }}
     needs: job2
     steps:
      - name: job3
