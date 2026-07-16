@@ -16,7 +16,7 @@ jobs:
        run: sleep 2
   job3:
     runs-on: ubuntu-latest
-   steps:
+    steps:
      - name: job3
        run: sleep 2
 
