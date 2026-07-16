@@ -1,16 +1,25 @@
 name: Matrix Execution
 on:
- workflow_dispatch
-
+  workflow_dispatch
 jobs:
-  example_matrix:
+  matrix_example:
+    runs-on: ubuntu:latest
     strategy:
       matrix:
         version: [18, 19, 24]
-       
-  runs-on: ubuntu-latest
-  steps:
-   - name: Install nodejs
-   - uses: actions/setup-node@v6
-     with:
-      node-version: 24
+
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+
+
+      - name: Install Nodejs
+        uses: actions/setup-node@v6    
+        with:
+          node-version: ${{ matrix.version }}
+
+
+
+     
