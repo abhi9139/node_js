@@ -6,13 +6,18 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
-    run: sleep 2
+    steps:
+     - name: job1
+       run: sleep 2
   job2:
     runs-on: ubuntu-latest
-    run: sleep 2
+    steps:
+     - name: job2
+       run: sleep 2
   job3:
     runs-on: ubuntu-latest
-    run: sleep 2
-
+   steps:
+     - name: job3
+       run: sleep 2
 
 
