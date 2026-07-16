@@ -1,0 +1,16 @@
+name: Matrix Execution
+on:
+ workflow_dispatch
+
+jobs:
+  example_matrix:
+    strategy:
+      matrix:
+        version: [18, 19, 24]
+       
+runs-on: ubuntu-latest
+steps:
+  - name: Install nodejs
+  - uses: actions/setup-node@v6
+    with:
+      node-version: 24
