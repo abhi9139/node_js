@@ -12,10 +12,11 @@ jobs:
        name: first_artifact
        path: build/
 
-    job2:
+  job2:
+      needs: job1
       runs-on: ubuntu:latest
+     
       steps:
-       steps:
        - uses: actions/download-artifact@v8
          with:
            name: first_artifact
