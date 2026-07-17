@@ -6,7 +6,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     outputs:
-      job1Output: ${{steps.Step2.outputs.msg}}"
+      job1Output: ${{steps.Step2.outputs.msg}}
     steps:
       - name: Set a Variable
         id: Step1
