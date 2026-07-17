@@ -1,0 +1,28 @@
+name: outputs
+on: 
+ push
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    outputs:
+      job1Output: ${{steps.Step2.outputs.msg}}"
+    steps:
+      - name: Set a Variable
+        id: Step1
+        run: echo "msg=It is from Step1" >> $GITHUB_OUTPUT
+
+      - name: Get the Step1 variable
+        run: echo "The step1 varible is ==> ${{steps.Step1.outputs.msg}}"   
+
+      - name: Set the another Variable
+        id: Step2
+
+        run: echo "msg=Data2" >> $GITHUB_OUTPUT
+
+  job2:
+    needs: job1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the data from job1
+        run: echo "The output from job1 is ==> ${{needs.job1.outputs.job1Output}}"
