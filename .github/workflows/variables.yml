@@ -25,22 +25,22 @@ env:
 
 
 jobs:
-  # job1:
-  #    runs-on: ubuntu-latest
-  #    env:
-  #     JOB1_ENV: "gattu"
-  #    steps:
-  #      - name: Show the inputs
-  #        run: |
-  #         echo "Environment type: ${{inputs.environment}}"
-  #         echo "Application Version : ${{inputs.version}}"
+  job1:
+     runs-on: ubuntu-latest
+     env:
+      JOB1_ENV: "gattu"
+     steps:
+       - name: Show the inputs
+         run: |
+          echo "Environment type: ${{inputs.environment}}"
+          echo "Application Version : ${{inputs.version}}"
 
-  #      - name: Global_Variables
-  #        run: |
-  #         echo "Global env: $Global_Env" 
-  #      - name: Job1_environment
-  #        run: |
-  #         echo "Job env: $JOB1_ENV"    
+       - name: Global_Variables
+         run: |
+          echo "Global env: $Global_Env" 
+       - name: Job1_environment
+         run: |
+          echo "Job env: $JOB1_ENV"    
           
 
 
